@@ -14,3 +14,13 @@ class PostFormulario(forms.ModelForm):
             'mensaje': forms.Textarea(
                 attrs={'placeholder': 'Deje su mensaje aquí'}),
         }
+        
+class RecuperarForm(forms.Form):
+#     nombre = forms.CharField(required=False)
+    class Meta: 
+        model = Formulario
+        fields = ["correo"]
+    correo = forms.EmailField(required=True)
+    def clean_correo(self):
+        correo = self.cleaned_data.get("correo")
+        return correo

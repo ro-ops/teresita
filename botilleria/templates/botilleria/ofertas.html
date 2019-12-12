@@ -17,6 +17,13 @@
 </head>
 <body>
  <!-- NavBar -->
+ <div id="usuario">
+        <p class="login">
+            Bienvenido <b>{{request.user.username}}</b>!
+            <a href="/logout">Cerrar sesión</a>
+        </p>
+  
+      </div>
  <div class="menu-wrap">
         <input type="checkbox" class="toggler">
         <div class="hamburger"><div></div></div>
@@ -24,9 +31,11 @@
             <div>
                 <div>
                     <ul>
-                        <li><a class="f-menu" href="/">INICIO</a></li>
-                        <li><a class="f-menu" href="/productos">PRODUCTOS</a></li>
-                        <li><a class="f-menu" href="/nosotros">NOSOTROS</a></li>
+                      <li><a class="f-menu" href="/">INICIO</a></li>
+                      <li><a class="f-menu" href="/productos">PRODUCTOS</a></li>
+                      <li><a class="f-menu" href="/nosotros">NOSOTROS</a></li>
+                      <li><a class="f-menu" href="/registrar">¡REGISTRATE!</a></li>
+                      <li><a class="f-menu" href="/login">¡LOGEATE!</a></li>
                     </ul>
                </div>
           </div>

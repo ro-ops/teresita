@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Distribuidora - SantaTeresita</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flexboxgrid.min.css' %}">  
+    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/2745f6f530/UntitledProject/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- Jquery saber explicar-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script> <!-- Validador jquery-->
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Patrick+Hand|Permanent+Marker|Special+Elite&display=swap" rel="stylesheet">   
+</head>
+<body>
+<header>
+ <!-- NavBar -->
+ <div id="usuario">
+   <p class="login">
+       Bienvenido <b>{{request.user.username}}</b>!
+       <a href="/logout">Cerrar sesión</a>
+   </p>
+
+ </div>
+ <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger"><div></div></div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                     <li><a class="f-menu" href="/">INICIO</a></li>
+                     <li><a class="f-menu" href="/productos">PRODUCTOS</a></li>
+                     <li><a class="f-menu" href="/nosotros">NOSOTROS</a></li>
+                     <li><a class="f-menu" href="/registrar">¡REGISTRATE!</a></li>
+                     <li><a class="f-menu" href="/login">¡LOGEATE!</a></li>
+                    </ul>
+               </div>
+          </div>
+      </div>
+  </div>
+</header>
+  
+<main>
+ <!-- Redes sociales / Flotante-->
+ <div class="social-bar">
+   <a href="https://www.facebook.com" class="icon icon-facebook" target="_blank"></a>
+   <a href="https://www.instagram.com" class="icon icon-instagram" target="_blank"></a>
+   <a href="https://www.twitter.com" class="icon icon-twitter" target="_blank"></a>
+ </div>
+    
+ <!--Contenido banner-->
+ <header class="showcase">
+   <div class="container showcase-inner">
+      <h1 class="f-menu" >BIENVENIDO</h1>
+      <h2 class="s-banner" >DISTRIBUIDORA SANTA TERESITA</h2>
+      
+      <div class="contenedor">
+         <h1>¡Registrate en Nuestra Página!</h1>
+         <form method="POST">
+           {{ form.as_p }}
+           {% csrf_token %}
+           <button class="boton1" type="submit">Registrar</button>
+       </form>
+ 
+       </div>
+   </div>
+ </header>
+ 
+</main>
+
+<footer class="footer">
+   <div class="footer-bottom">
+        &copy; santateresita.com | created by Manuel Verdugo Romina Castillo 
+   </div>
+</footer>
+
+</body>
+</html>

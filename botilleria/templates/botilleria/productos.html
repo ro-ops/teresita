@@ -16,6 +16,13 @@
     <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Patrick+Hand|Permanent+Marker|Special+Elite&display=swap" rel="stylesheet">   
 </head>
 <body>
+        <div id="usuario">
+                <p class="login">
+                    Bienvenido <b>{{request.user.username}}</b>!
+                    <a href="/logout">Cerrar sesión</a>
+                </p>
+          
+              </div>
  <!-- NavBar -->
  <div class="menu-wrap">
         <input type="checkbox" class="toggler">
@@ -25,8 +32,10 @@
                 <div>
                     <ul>
                         <li><a class="f-menu" href="/">INICIO</a></li>
-                        <li><a class="f-menu" href="/productos">PRODUCTOS</a></li>
-                        <li><a class="f-menu" href="/nosotros">NOSOTROS</a></li>
+                      <li><a class="f-menu" href="/productos">PRODUCTOS</a></li>
+                      <li><a class="f-menu" href="/nosotros">NOSOTROS</a></li>
+                      <li><a class="f-menu" href="/registrar">¡REGISTRATE!</a></li>
+                      <li><a class="f-menu" href="/login">¡LOGEATE!</a></li>
                     </ul>
                </div>
           </div>
