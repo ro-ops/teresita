@@ -32,7 +32,7 @@ if DEBUG:
 
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_HOST_USER = "romi.ant.ch@gmail.com"
-EMAIL_HOST_PASSWORD = "bprc fbip tcag dabu" #bprcfbiptcagdabu
+EMAIL_HOST_PASSWORD = "Az1.sx2.dc3." #bprcfbiptcagdabu
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -82,6 +82,8 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTH_USER_MODEL = 'botilleria.Usuario'
 
 WSGI_APPLICATION = 'teresita.wsgi.application'
 
